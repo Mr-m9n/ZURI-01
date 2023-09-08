@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #000;
+  --cyan: cyan;
+  --red: #dd1b4e;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.5;
+  font-size: 10px;
+}
+
+body {
+  height: 100vh;
+  overflow-x: hidden;
+  color: var(--white);
+  font-family: "IBM Plex Mono", sans-serif;
+}
+
+.card {
+  background-color: var(--black);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 3rem 2rem 1rem;
+}
+
+.card--img {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  /* border: 4px solid var(--cyan); */
+  box-shadow: inset 0 0 12px 4px rgb(0, 255, 255, 0.5);
+}
+
+.card--img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.card--name {
+  font-size: 3.8rem;
+  margin-bottom: 3rem;
+}
+
+.card--desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.card--desc h2 {
+  font-size: 1.8rem;
+  color: var(--red);
+}
+
+.card--desc_info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 7rem;
+}
+
+.card--desc_info p {
+  border-bottom: 1px solid var(--cyan);
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+#card--link {
+  text-decoration: none;
+  background-color: var(--cyan);
+  color: black;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  margin-bottom: auto;
+}
+
+footer {
+  display: flex;
+  font-size: 1.1rem;
+  gap: 20rem;
+  color: var(--red);
+}
+
+@media screen and (min-width: 790px) {
+  body {
+    background-color: var(--cyan);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card {
+    height: 75%;
+    border-radius: 3rem;
+  }
+
+  .card--name {
+    margin-bottom: 2rem;
+  }
+
+  .card--desc_info {
+    margin-bottom: 2rem;
+  }
+}

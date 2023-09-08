@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>ZURI-01</title>
+  </head>
+  <body>
+    <section class="card">
+      <div class="card--img">
+        <img
+          src="image/myFavPic.jpeg"
+          alt="Mr-m9n"
+          data-testid="image/myFavPic.jpeg"
+        />
+      </div>
+      <h1 class="card--name" data-testid="slackUserName">Idris Faleye</h1>
+      <div class="card--desc">
+        <h2 data-testid="myTrack">FRONT-END WEB DEVELOPER</h2>
+        <div class="card--desc_info">
+          <p>HTML</p>
+          <p>CSS</p>
+          <p>JAVASCRIPT</p>
+        </div>
+      </div>
+      <a
+        id="card--link"
+        href="https://github.com/Mr-m9n"
+        target="_blank"
+        data-testid="“githubURL”"
+        >Github</a
+      >
+      <footer>
+        <span class="day" data-testid="currentDayOfTheWeek"></span>
+        <span class="date" data-testid="currentUTCTime"></span>
+      </footer>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
