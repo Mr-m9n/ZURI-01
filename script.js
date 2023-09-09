@@ -12,9 +12,12 @@ const days = [
   "Saturday",
 ];
 
-function updateDateTime() {
-  day.textContent = days[defaultDate.getDay()];
-  date.textContent = `${Math.ceil(defaultDate.getMilliseconds())}ms`;
-}
+const dayDisplay = days[defaultDate.getDay()];
+const dateDisplay = `${defaultDate.getUTCMilliseconds()}ms`;
 
-setInterval(updateDateTime, 1);
+function updateDateTime() {
+  day.textContent = dayDisplay;
+  date.innerHTML = dateDisplay;
+}
+// Update every milliseconds
+window.setInterval(updateDateTime, 1);
