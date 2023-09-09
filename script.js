@@ -13,4 +13,4 @@ const days = [
 ];
 
 day.textContent = days[defaultDate.getDay()];
-date.textContent = `${Math.ceil(defaultDate.getUTCMilliseconds())}s`;
+date.textContent = `${Math.ceil(defaultDate.getUTCMilliseconds())}ms`;
