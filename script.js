@@ -12,5 +12,9 @@ const days = [
   "Saturday",
 ];
 
-day.textContent = days[defaultDate.getDay()];
-date.textContent = `${Math.ceil(defaultDate.getUTCMilliseconds())}ms`;
+function updateDateTime() {
+  day.textContent = days[defaultDate.getDay()];
+  date.textContent = `${Math.ceil(defaultDate.getMilliseconds())}ms`;
+}
+
+setInterval(updateDateTime, 1);
