@@ -1,7 +1,3 @@
-const day = document.querySelector(".day");
-const date = document.querySelector(".date");
-const defaultDate = new Date();
-
 const days = [
   "Sunday",
   "Monday",
@@ -12,12 +8,10 @@ const days = [
   "Saturday",
 ];
 
-const dayDisplay = days[defaultDate.getDay()];
-const dateDisplay = `${defaultDate.getUTCMilliseconds()}ms`;
-
-function updateDateTime() {
-  day.textContent = dayDisplay;
-  date.innerHTML = dateDisplay;
-}
-// Update every milliseconds
-window.setInterval(updateDateTime, 1);
+setInterval(function updateDateTime() {
+  const day = document.querySelector(".day");
+  const date = document.querySelector(".time");
+  const now = new Date();
+  day.textContent = days[now.getDay()];
+  date.textContent = `${now.getTime()}ms`;
+}, 1);
